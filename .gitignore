@@ -1,0 +1,48 @@
+# dependencies
+/node_modules
+/construction-timelapse-video/node_modules
+
+# out-of-scope: raw source assets and the Remotion sub-project that
+# generated the timelapse video (the app only needs the copies in public/)
+/Oscar_1.JPG
+/Oscar_Director.png
+/oe photo.png
+/construction-timelapse.mp4
+/construction-timelapse-video/
+
+# scratch / planning docs, not part of the app
+/PRD_prompt.txt
+/prompt.md
+/spec.txt
+/~$spec.txt
+/skills-lock.json
+
+# Claude Code / agent tooling directories (local, not app source)
+/.agents/
+/.claude/
+
+# next.js
+/.next/
+/out/
+
+# testing
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
