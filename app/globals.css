@@ -30,20 +30,6 @@ body {
   outline-offset: 3px;
 }
 
-.blueprint-grid {
-  background-image:
-    linear-gradient(rgba(244, 246, 242, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 246, 242, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-.blueprint-grid-light {
-  background-image:
-    linear-gradient(rgba(16, 32, 58, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 32, 58, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
 .crosshair {
   position: relative;
 }
