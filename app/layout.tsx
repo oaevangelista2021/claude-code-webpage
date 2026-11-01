@@ -32,10 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${oswald.variable} ${plexSans.variable} ${plexMono.variable} font-body antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${oswald.variable} ${plexSans.variable} ${plexMono.variable}`}
+    >
+      <body className="font-body antialiased">
         {children}
       </body>
     </html>
