@@ -10,6 +10,8 @@ const config: Config = {
         concrete: "#e8e5dc",
         signal: "#ff5a1f",
         circuit: "#3ddc97",
+        // GlassFold shader background color (components/ui/glass-fold.tsx default color2)
+        night: "#06081e",
       },
       fontFamily: {
         display: ["var(--font-display)", "sans-serif"],

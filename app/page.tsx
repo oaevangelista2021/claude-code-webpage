@@ -6,7 +6,7 @@ import {
   Ruler,
 } from "lucide-react";
 import VideoReveal from "@/components/VideoReveal";
-import { ShaderBackground } from "@/components/ui/shader-background";
+import { GlassFold } from "@/components/ui/glass-fold";
 
 const CONTACT_EMAIL = "oevangelista2021@gmail.com";
 const CONSULT_MAILTO = `mailto:${CONTACT_EMAIL}?subject=Initial Consultation Request`;
@@ -43,10 +43,13 @@ const agents = [
 export default function Home() {
   return (
     <main className="text-concrete">
-      <ShaderBackground />
+      {/* Full-page animated backdrop; sections below sit on semi-opaque ink/steel panels */}
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        <GlassFold />
+      </div>
 
       {/* Top bar */}
-      <header className="sticky top-0 z-10 border-b border-concrete/10 bg-ink/70 backdrop-blur">
+      <header className="sticky top-0 z-10 border-b border-concrete/10 bg-night/60 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <span className="font-display text-xl tracking-tight text-concrete">
             Buildology
@@ -86,7 +89,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="border-t border-concrete/10 bg-ink/50 backdrop-blur-sm">
+        <div className="border-t border-concrete/10 bg-night/40 backdrop-blur-sm">
           <div className="mx-auto flex max-w-6xl flex-wrap gap-x-10 gap-y-3 px-6 py-5 font-mono text-xs uppercase tracking-wide text-concrete/50">
             <span>General Contracting</span>
             <span className="border-l border-concrete/20 pl-10">
@@ -100,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Section B: Core Services */}
-      <section className="border-b border-concrete/10 bg-ink/85 text-concrete">
+      <section className="border-b border-concrete/10 text-concrete">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <div className="crosshair order-2 border border-concrete/25 p-2 md:order-1">
             <img
@@ -140,7 +143,7 @@ export default function Home() {
       </section>
 
       {/* Section C: The 5-Agent System */}
-      <section className="border-b border-concrete/10 bg-steel/90 text-concrete">
+      <section className="border-b border-concrete/10 text-concrete">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
             <div className="crosshair order-2 border border-concrete/25 p-2 md:order-1">
@@ -163,11 +166,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-14 grid gap-px overflow-hidden border border-concrete/15 bg-concrete/15 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-px overflow-hidden border border-concrete/15 bg-concrete/10 sm:grid-cols-2 lg:grid-cols-3">
             {agents.map((agent, index) => {
               const Icon = agent.icon;
               return (
-                <div key={agent.name} className="bg-steel p-7">
+                <div key={agent.name} className="bg-night/80 p-7 backdrop-blur-sm">
                   <div className="flex items-center justify-between">
                     <Icon
                       className="h-6 w-6 text-circuit"
@@ -192,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* Section D: Video Showcase */}
-      <section className="bg-ink/85 py-20 md:py-28">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-10 max-w-xl">
             <h2 className="font-display text-3xl text-concrete sm:text-4xl">
@@ -208,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Section E: Footer / Contact */}
-      <footer className="border-t border-concrete/10 bg-ink/85">
+      <footer className="border-t border-concrete/10 bg-night/40 backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center md:py-24">
           <h2 className="font-display text-3xl text-concrete sm:text-4xl">
             Hire us or see our AI agents in action.
